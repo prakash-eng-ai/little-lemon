@@ -88,7 +88,8 @@ fun Profile(navController: NavController) {
         Spacer(modifier = Modifier.weight(1f))
         Button(
             onClick = {
-                navController.navigate(Home.route)
+                sharedPreferences.edit().clear().commit()
+                navController.navigate(Onboarding.route)
             },
             modifier = Modifier
                 .align(Alignment.CenterHorizontally)

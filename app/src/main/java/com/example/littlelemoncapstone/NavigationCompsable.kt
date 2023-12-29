@@ -3,11 +3,9 @@ package com.example.littlelemoncapstone
 import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.littlelemoncapstone.ui.theme.LittleLemonCapstoneTheme
 
 @Composable
 fun MyNavigation() {
@@ -22,7 +20,7 @@ fun MyNavigation() {
         startDestination = mStartDestination
     ) {
         composable(Home.route) {
-            Home()
+            Home(navController)
         }
         composable(Profile.route) {
             Profile(navController)
@@ -33,10 +31,11 @@ fun MyNavigation() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun MyNavigationPreview() {
     LittleLemonCapstoneTheme {
         MyNavigation()
     }
-}
+}*/
